@@ -1,28 +1,38 @@
 package model.constants;
 
-public class NamedPizza {
-    public static final String Basic = "Basic" ;
-    public static final String Hawaiian = "Hawaiian" ;
-    public static final String Bacon_Crispy = "Bacon_Crispy" ;
-    public static final String American = "American" ;
-    public static final String Traviata = "Traviata" ;
-    public static final String Burger = "Burger" ;
-    public static final String Castellera = "Castellera" ;
-    public static final String Cowboy = "Cowboy" ;
-    public static final String Texas = "Texas" ;
-    public static final String Coast = "Coast" ;
-    public static final String BBQ = "BBQ" ;
-    public static final String Diablo = "Diablo" ;
-    public static final String Carbonara = "Carbonara" ;
-    public static final String Spanish = "Spanish" ;
-    public static final String Four_Cheeses = "Four cheeses" ;
-    public static final String Pepperoni = "Pepperoni" ;
-    public static final String Vegetal = "Vegetal" ;
-    public static final String Barcelona = "Barcelona" ;
-    public static final String Girona = "Girona" ;
-    public static final String Tarragona = "Tarragona" ;
-    public static final String Lleida = "Lleida" ;
-    public static final String Six_Cheeses = "Six cheeses" ;
-    public static final String Mallorca = "Mallorca" ;
-    public static final String Carbonara_Deluxe = "Carbonara deluxe" ;
+public enum NamedPizza {
+    Basic("Basic"),
+    Hawaiian("Hawaiian"),
+    Bacon_Crispy("Bacon_Crispy"),
+    American("American"),
+    Traviata("Traviata"),
+    Burger("Burger"),
+    Castellera("Castellera"),
+    Cowboy("Cowboy"),
+    Texas("Texas"),
+    Coast("Coast"),
+    BBQ("BBQ"),
+    Diablo("Diablo"),
+    Carbonara("Carbonara"),
+    Spanish("Spanish"),
+    Four_Cheeses("Four cheeses"),
+    Pepperoni("Pepperoni"),
+    Vegetal("Vegetal"),
+    Barcelona("Barcelona"),
+    Girona("Girona"),
+    Tarragona("Tarragona"),
+    Lleida("Lleida"),
+    Six_Cheeses("Six cheeses"),
+    Mallorca("Mallorca"),
+    Carbonara_Deluxe("Carbonara deluxe");
+
+    private final String val;
+
+    NamedPizza(String val) {
+        this.val = val;
+    }
+
+    public String getVal() {
+        return val;
+    }
 }

@@ -1,34 +1,44 @@
 package model.constants;
 
-public class Topping {
-    public static final String Ham = "Ham";
-    public static final String Pineapple = "Pineapple";
-    public static final String Chicken = "Chicken";
-    public static final String Bacon = "Bacon";
-    public static final String Frankfurt = "Frankfurt";
-    public static final String Egg = "Egg";
-    public static final String Sausage = "Sausage";
-    public static final String Onion = "Onion";
-    public static final String Miniburgers = "Miniburgers";
-    public static final String Tuna = "Tuna";
-    public static final String Peperoni = "Peperoni";
-    public static final String Olives = "Olives";
-    public static final String BBQ_Sauce = "BBQ sauce";
-    public static final String Cheddar = "Cheddar";
-    public static final String Roquefort = "Roquefort";
-    public static final String Tomato_slices = "Tomato slices";
-    public static final String Anchovies = "Anchovies";
-    public static final String Prawns = "Prawns";
-    public static final String Beef = "Beef";
-    public static final String Carbonara_sauce = "Carbonara_sauce";
-    public static final String Mushrooms = "Mushrooms";
-    public static final String Jamon_serrano = "Jamon";
-    public static final String Mozzarella = "Mozzarella";
-    public static final String Emmental = "Emmental";
-    public static final String Bell_peppers = "Bell peppers";
-    public static final String Artichoke = "Artichoke";
-    public static final String Brie = "Brie";
-    public static final String Goat_cheese = "Goat cheese";
-    public static final String Sobrasada = "Sobrasada";
-    public static final String Honey = "Honey";
+public enum Topping {
+    Ham("Ham"),
+    Pineapple("Pineapple"),
+    Chicken("Chicken"),
+    Bacon("Bacon"),
+    Frankfurt("Frankfurt"),
+    Egg("Egg"),
+    Sausage("Sausage"),
+    Onion("Onion"),
+    Miniburgers("Miniburgers"),
+    Tuna("Tuna"),
+    Pepperoni("Pepperoni"),
+    Olives("Olives"),
+    BBQ_Sauce("BBQ sauce"),
+    Cheddar("Cheddar"),
+    Roquefort("Roquefort"),
+    Tomato_slices("Tomato slices"),
+    Anchovies("Anchovies"),
+    Prawns("Prawns"),
+    Beef("Beef"),
+    Carbonara_sauce("Carbonara_sauce"),
+    Mushrooms("Mushrooms"),
+    Jamon_serrano("Jamon"),
+    Mozzarella("Mozzarella"),
+    Emmental("Emmental"),
+    Bell_peppers("Bell peppers"),
+    Artichoke("Artichoke"),
+    Brie("Brie"),
+    Goat_cheese("Goat cheese"),
+    Sobrasada("Sobrasada"),
+    Honey("Honey");
+
+    private final String val;
+
+    Topping(String val) {
+        this.val = val;
+    }
+
+    public String getVal() {
+        return val;
+    }
 }

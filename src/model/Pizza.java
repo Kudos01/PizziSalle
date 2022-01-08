@@ -1,18 +1,32 @@
 package model;
-
 import model.constants.Topping;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class Pizza {
     private String pizza_name;
-    private HashSet<String> ingredients;
-    private Dough crust;
+    private ArrayList<Topping> ingredients;
+    private Crust crust;
 
-    protected enum Dough{
-        Original, Thin, Sicilian
+    public enum Crust {
+        Original("Original"),
+        Thin("Thin"),
+        Sicilian("Sicilian");
+
+        private final String val;
+
+        Crust(String val) {
+            this.val = val;
+        }
+
+        public String getVal() {
+            return val;
+        }
     }
 
-    public Pizza(String pizza_name, HashSet<String> ingredients, Dough crust) {
+    public Pizza(String pizza_name, ArrayList<Topping> ingredients, Crust crust) {
         this.pizza_name = pizza_name;
         this.ingredients = ingredients;
         this.crust = crust;
@@ -22,11 +36,11 @@ public class Pizza {
         return pizza_name;
     }
 
-    public HashSet<String> getIngredients() {
+    public ArrayList<Topping> getIngredients() {
         return ingredients;
     }
 
-    public Dough getCrust() {
+    public Crust getCrust() {
         return crust;
     }
 
@@ -34,11 +48,11 @@ public class Pizza {
         this.pizza_name = pizza_name;
     }
 
-    public void setIngredients(HashSet<String> ingredients) {
+    public void setIngredients(ArrayList<Topping> ingredients) {
         this.ingredients = ingredients;
     }
 
-    public void setCrust(Dough crust) {
+    public void setCrust(Crust crust) {
         this.crust = crust;
     }
 }
