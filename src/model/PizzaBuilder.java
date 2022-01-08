@@ -1,6 +1,7 @@
 package model;
 
-import model.constants.NamedPizzas;
+import model.constants.NamedPizza;
+import model.constants.Topping;
 
 import java.util.HashSet;
 
@@ -8,7 +9,7 @@ public class PizzaBuilder{
 
     private String pizza_name;
     private Pizza.Dough dough;
-    private HashSet<Pizza.Topping> toppings = new HashSet<Pizza.Topping>();
+    private HashSet<String> toppings = new HashSet<String>();
 
     public PizzaBuilder(){
 
@@ -17,53 +18,53 @@ public class PizzaBuilder{
     public PizzaBuilder namedPizzaBuilder(String pizza_name){
 
         switch (pizza_name){
-            case NamedPizzas.Basic:
+            case NamedPizza.Basic:
                 break;
-            case NamedPizzas.Hawaiian:
+            case NamedPizza.Hawaiian:
                 break;
-            case NamedPizzas.Bacon_Crispy:
+            case NamedPizza.Bacon_Crispy:
                 break;
-            case NamedPizzas.American:
+            case NamedPizza.American:
                 break;
-            case NamedPizzas.Traviata:
+            case NamedPizza.Traviata:
                 break;
-            case NamedPizzas.Burger:
+            case NamedPizza.Burger:
                 break;
-            case NamedPizzas.Castellera:
+            case NamedPizza.Castellera:
                 break;
-            case NamedPizzas.Cowboy:
+            case NamedPizza.Cowboy:
                 break;
-            case NamedPizzas.Texas:
+            case NamedPizza.Texas:
                 break;
-            case NamedPizzas.Coast:
+            case NamedPizza.Coast:
                 break;
-            case NamedPizzas.BBQ:
+            case NamedPizza.BBQ:
                 break;
-            case NamedPizzas.Diablo:
+            case NamedPizza.Diablo:
                 break;
-            case NamedPizzas.Carbonara:
+            case NamedPizza.Carbonara:
                 break;
-            case NamedPizzas.Spanish:
+            case NamedPizza.Spanish:
                 break;
-            case NamedPizzas.Four_Cheeses:
+            case NamedPizza.Four_Cheeses:
                 break;
-            case NamedPizzas.Pepperoni:
+            case NamedPizza.Pepperoni:
                 break;
-            case NamedPizzas.Vegetal:
+            case NamedPizza.Vegetal:
                 break;
-            case NamedPizzas.Barcelona:
+            case NamedPizza.Barcelona:
                 break;
-            case NamedPizzas.Girona:
+            case NamedPizza.Girona:
                 break;
-            case NamedPizzas.Tarragona:
+            case NamedPizza.Tarragona:
                 break;
-            case NamedPizzas.Lleida:
+            case NamedPizza.Lleida:
                 break;
-            case NamedPizzas.Six_Cheeses:
+            case NamedPizza.Six_Cheeses:
                 break;
-            case NamedPizzas.Mallorca:
+            case NamedPizza.Mallorca:
                 break;
-            case NamedPizzas.Carbonara_Deluxe:
+            case NamedPizza.Carbonara_Deluxe:
                 break;
         }
 
@@ -75,7 +76,7 @@ public class PizzaBuilder{
         return this;
     }
 
-    public PizzaBuilder addTopping(Pizza.Topping topping){
+    public PizzaBuilder addTopping(String topping){
         this.toppings.add(topping);
         return this;
     }

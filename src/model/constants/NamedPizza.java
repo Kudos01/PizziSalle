@@ -1,6 +1,6 @@
 package model.constants;
 
-public class NamedPizzas{
+public class NamedPizza {
     public static final String Basic = "Basic" ;
     public static final String Hawaiian = "Hawaiian" ;
     public static final String Bacon_Crispy = "Bacon_Crispy" ;

@@ -1,50 +1,14 @@
 package model;
 
-import java.util.HashMap;
+import model.constants.Topping;
 import java.util.HashSet;
 
 public class Pizza {
     private String pizza_name;
-    private HashSet<Topping> ingredients;
-    private Dough crust;
+    private HashSet<String> ingredients;
+    private String crust;
 
-    protected enum Dough{
-        Original, Thin, Sicilian
-    }
-
-    protected enum Topping{
-        Ham,
-        Pineapple,
-        Chicken,
-        Bacon,
-        Frankfurt,
-        Egg,
-        Sausage,
-        Onion,
-        Miniburgers,
-        Tuna,
-        Peperoni,
-        Olives,
-        BBQ_Sauce,
-        Cheddar,
-        Roquefort,
-        Tomato_slices,
-        Anchovies,
-        Prawns,
-        Beef,
-        Carbonara_sauce,
-        Mushrooms,
-        Mozzarella,
-        Emmental,
-        Bell_peppers,
-        Artichoke,
-        Brie,
-        Goat_Cheese,
-        Sobrasada,
-        Honey
-    }
-
-    public Pizza(String pizza_name, HashSet<Topping> ingredients, Dough crust) {
+    public Pizza(String pizza_name, HashSet<String> ingredients, String crust) {
         this.pizza_name = pizza_name;
         this.ingredients = ingredients;
         this.crust = crust;
@@ -54,7 +18,7 @@ public class Pizza {
         return pizza_name;
     }
 
-    public HashSet<Topping> getIngredients() {
+    public HashSet<String> getIngredients() {
         return ingredients;
     }
 
@@ -66,7 +30,7 @@ public class Pizza {
         this.pizza_name = pizza_name;
     }
 
-    public void setIngredients(HashSet<Topping> ingredients) {
+    public void setIngredients(HashSet<String> ingredients) {
         this.ingredients = ingredients;
     }
 
