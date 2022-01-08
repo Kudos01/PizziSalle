@@ -1,8 +1,6 @@
-package model;
+package Model;
 
-import model.constants.Delegations;
-
-import java.util.Date;
+import Model.constants.Delegations;
 
 public class Customer {
     private String name;

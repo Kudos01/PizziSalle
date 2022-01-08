@@ -2,24 +2,23 @@ package Controller;
 
 import DAO.CustomerDAO;
 import DAO.OrderDAO;
-import model.Customer;
-import model.Order;
-import model.Pizza;
-import model.PizzaBuilder;
-import model.constants.Delegations;
-import model.constants.NamedPizza;
-import model.constants.Topping;
-import view.MenuView;
+import Model.Customer;
+import Model.Order;
+import Model.Pizza;
+import Model.PizzaBuilder;
+import Model.constants.Delegations;
+import Model.constants.NamedPizza;
+import Model.constants.Topping;
+import View.MenuView;
 
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
-import static model.Order.Drink.Beer;
+import static Model.Order.Drink.Beer;
 
 
 public class Controller {
@@ -221,6 +220,8 @@ public class Controller {
             }
         }
 
+        mv.printSeparator();
+
         // Get customer address
         String address = mv.displayStringGetUserInput("Enter Customer Address: ");
         customer.setAddress(address);
@@ -237,6 +238,7 @@ public class Controller {
                 mv.printString("Please insert a valid delegation.");
             }
         }
+        mv.printSeparator();
         return customer;
     }
 }

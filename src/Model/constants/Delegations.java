@@ -1,4 +1,4 @@
-package model.constants;
+package Model.constants;
 
 public enum Delegations {
     Barcelona("Barcelona"),

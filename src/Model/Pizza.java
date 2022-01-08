@@ -1,9 +1,7 @@
-package model;
-import model.constants.Topping;
+package Model;
+import Model.constants.Topping;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 
 public class Pizza {
     private String pizza_name;

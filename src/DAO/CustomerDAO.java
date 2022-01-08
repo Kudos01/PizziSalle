@@ -1,7 +1,7 @@
 package DAO;
 
-import model.Customer;
-import view.MenuView;
+import Model.Customer;
+import View.MenuView;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

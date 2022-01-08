@@ -1,12 +1,13 @@
 package DAO;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
-
 import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import com.mysql.cj.jdbc.MysqlDataSource;
 import java.sql.*;
+
+/*
+    This singleton class stores the connection instance with the database, so that multiple instances (conncetions)
+    to the database are not created.
+ */
 
 public class DBConnection {
     private static DBConnection dbConnection = null;

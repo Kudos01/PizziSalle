@@ -1,11 +1,20 @@
-package model;
+package Model;
 
-import model.constants.NamedPizza;
-import model.constants.Topping;
+import Model.constants.NamedPizza;
+import Model.constants.Topping;
 
 import java.util.ArrayList;
+import static Model.constants.Topping.*;
 
-import static model.constants.Topping.*;
+/*
+    This class uses both the builder and the facade patterns.
+    It uses the builder pattern since it creates unique objects that will later "exist" by themselves.
+    It provides all the methods to shape and finally construct the object in question (Pizza).
+
+    It is also a facade class since it provides functionality that would otherwise need to be done by the caller class.
+    It provides the namedPizzaBuilder method that will build a named pizza and return the builder, so that the caller
+    can simply call this method without needing to tediously add all the ingredients specified by a particular pizza
+ */
 
 public class PizzaBuilder{
 

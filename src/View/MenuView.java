@@ -1,7 +1,7 @@
-package view;
+package View;
 
-import model.Order;
-import model.constants.Topping;
+import Model.Order;
+import Model.constants.Topping;
 
 import java.util.Scanner;
 

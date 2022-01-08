@@ -1,8 +1,7 @@
 package DAO;
 
-import model.Pizza;
-import model.PizzaBuilder;
-import view.MenuView;
+import Model.Pizza;
+import View.MenuView;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
