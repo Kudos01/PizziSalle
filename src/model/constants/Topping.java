@@ -20,7 +20,7 @@ public enum Topping {
     Anchovies("Anchovies"),
     Prawns("Prawns"),
     Beef("Beef"),
-    Carbonara_sauce("Carbonara_sauce"),
+    Carbonara_sauce("Carbonara sauce"),
     Mushrooms("Mushrooms"),
     Jamon_serrano("Jamon"),
     Mozzarella("Mozzarella"),

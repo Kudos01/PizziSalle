@@ -41,7 +41,7 @@ public class MenuView {
 
         for (Topping ingredient :
                 order.getPizza().getIngredients()) {
-            sb.append(ingredient).append(System.lineSeparator());
+            sb.append(ingredient.getVal()).append(System.lineSeparator());
         }
 
         sb.append(System.lineSeparator());

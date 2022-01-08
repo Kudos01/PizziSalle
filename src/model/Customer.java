@@ -1,5 +1,7 @@
 package model;
 
+import model.constants.Delegations;
+
 import java.util.Date;
 
 public class Customer {
@@ -8,7 +10,7 @@ public class Customer {
     private Date dob;
     private String address;
     private boolean first_order;
-    private String delegation;
+    private Delegations delegation;
 
     public void setName(String name) {
         this.name = name;
@@ -31,7 +33,7 @@ public class Customer {
     }
 
     public void setDelegation(String delegation) {
-        this.delegation = delegation;
+        this.delegation = Delegations.valueOf(delegation);
     }
 
     public void setDob(Date dob) {
@@ -58,7 +60,7 @@ public class Customer {
         return first_order;
     }
 
-    public String getDelegation() {
+    public Delegations getDelegation() {
         return delegation;
     }
 }

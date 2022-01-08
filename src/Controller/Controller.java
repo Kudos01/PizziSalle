@@ -4,6 +4,7 @@ import model.Customer;
 import model.Order;
 import model.Pizza;
 import model.PizzaBuilder;
+import model.constants.Delegations;
 import model.constants.NamedPizza;
 import model.constants.Topping;
 import view.MenuView;
@@ -76,17 +77,46 @@ public class Controller {
             customer.setAddress(address);
             mv.printSeparator();
 
+            flag = true;
             // Delegation
-            String delegation = mv.displayStringGetUserInput("Enter Delegation: ");
-            customer.setDelegation(delegation);
-            mv.printSeparator();
+            while(flag){
+                try {
+                    String delegation = mv.displayStringGetUserInput("Enter Delegation: ");
+                    customer.setDelegation(delegation);
+                    flag = false;
+                } catch (IllegalArgumentException e) {
+                    mv.printString("Please insert a valid delegation.");
+                }
+            }
 
             // Pizza info
             PizzaBuilder pb = new PizzaBuilder();
 
+            flag = true;
             // Pizza name
             String pizza_name = mv.displayStringGetUserInput("Enter Pizza name: ");
+
+            while (flag) {
+                if(Objects.equals(pizza_name, Delegations.Girona.getVal())
+                        || Objects.equals(pizza_name, Delegations.Barcelona.getVal())
+                        || Objects.equals(pizza_name, Delegations.Tarragona.getVal())
+                        || Objects.equals(pizza_name, Delegations.Lleida.getVal())){
+
+                    if(!Objects.equals(pizza_name, customer.getDelegation().getVal())){
+                        // Cannot order this pizza
+                        mv.printString("Cannot order this pizza.");
+                        mv.printSeparator();
+                        pizza_name = mv.displayStringGetUserInput("Enter Pizza name: ");
+                    }else{
+                        flag = false;
+                    }
+                }else{
+                    flag = false;
+                }
+            }
+
             pb.setPizza_name(pizza_name);
+
             try{
                 pb.namedPizzaBuilder(pizza_name);
             }catch (IllegalArgumentException e){
