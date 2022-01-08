@@ -20,7 +20,7 @@ public class Main {
         Singleton for DB connection
         Builder for pizzas
         ??Facade for hiding the pizza building complexity??
-        Facade in the singleton because we hide the complexity of accessing the DB
+        Facade in the singleton and DAOs because we hide the complexity of accessing the DB
         Builder for the orders
         DAO patterns for the DB
      */
@@ -32,47 +32,8 @@ public class Main {
     Customers
      */
 
-    public static Connection conn = null;
-
-    public static boolean connect() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.ConnectionGroup");
-            conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/PizziSalle",
-                    "java", "password");
-            if (conn != null) {
-                System.out.println("Connection failed");
-            }
-            return true;
-        } catch(SQLException ex) {
-            System.out.println("Problems SQL ex");
-        } catch(ClassNotFoundException ex) {
-            ex.printStackTrace();
-        }
-
-        return false;
-
-    }
-
     public static void main(String[] args) throws SQLException {
-        MysqlDataSource dataSource = new MysqlDataSource();
-        dataSource.setUser("java");
-        dataSource.setPassword("password");
 
-        dataSource.setUrl("jdbc:mysql://localhost:3306/PizziSalle");
-
-        dataSource.setServerName("PizziSalle");
-
-        Connection conn = dataSource.getConnection();
-        Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT * FROM pizzas");
-
-        rs.next();
-        System.out.println(rs.getString("pizza_name"));
-
-
-        rs.close();
-        stmt.close();
-        conn.close();
     }
 
 }
