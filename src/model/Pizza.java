@@ -6,9 +6,13 @@ import java.util.HashSet;
 public class Pizza {
     private String pizza_name;
     private HashSet<String> ingredients;
-    private String crust;
+    private Dough crust;
 
-    public Pizza(String pizza_name, HashSet<String> ingredients, String crust) {
+    protected enum Dough{
+        Original, Thin, Sicilian
+    }
+
+    public Pizza(String pizza_name, HashSet<String> ingredients, Dough crust) {
         this.pizza_name = pizza_name;
         this.ingredients = ingredients;
         this.crust = crust;

@@ -15,14 +15,14 @@ public class NamedPizza {
     public static final String Diablo = "Diablo" ;
     public static final String Carbonara = "Carbonara" ;
     public static final String Spanish = "Spanish" ;
-    public static final String Four_Cheeses = "Four_Cheeses" ;
+    public static final String Four_Cheeses = "Four cheeses" ;
     public static final String Pepperoni = "Pepperoni" ;
     public static final String Vegetal = "Vegetal" ;
     public static final String Barcelona = "Barcelona" ;
     public static final String Girona = "Girona" ;
     public static final String Tarragona = "Tarragona" ;
     public static final String Lleida = "Lleida" ;
-    public static final String Six_Cheeses = "Six_Cheeses" ;
+    public static final String Six_Cheeses = "Six cheeses" ;
     public static final String Mallorca = "Mallorca" ;
-    public static final String Carbonara_Deluxe = "Carbonara_Deluxe" ;
+    public static final String Carbonara_Deluxe = "Carbonara deluxe" ;
 }

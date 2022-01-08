@@ -13,21 +13,22 @@ public class Topping {
     public static final String Tuna = "Tuna";
     public static final String Peperoni = "Peperoni";
     public static final String Olives = "Olives";
-    public static final String BBQ_Sauce = "BBQ_Sauce";
+    public static final String BBQ_Sauce = "BBQ sauce";
     public static final String Cheddar = "Cheddar";
     public static final String Roquefort = "Roquefort";
-    public static final String Tomato_slices = "Tomato_slices";
+    public static final String Tomato_slices = "Tomato slices";
     public static final String Anchovies = "Anchovies";
     public static final String Prawns = "Prawns";
     public static final String Beef = "Beef";
     public static final String Carbonara_sauce = "Carbonara_sauce";
     public static final String Mushrooms = "Mushrooms";
+    public static final String Jamon_serrano = "Jamon";
     public static final String Mozzarella = "Mozzarella";
     public static final String Emmental = "Emmental";
-    public static final String Bell_peppers = "Bell_peppers";
+    public static final String Bell_peppers = "Bell peppers";
     public static final String Artichoke = "Artichoke";
     public static final String Brie = "Brie";
-    public static final String Goat_Cheese = "Goat_Cheese";
+    public static final String Goat_cheese = "Goat cheese";
     public static final String Sobrasada = "Sobrasada";
     public static final String Honey = "Honey";
 }
