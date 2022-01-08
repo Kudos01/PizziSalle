@@ -10,6 +10,8 @@ public class Pizza {
     private ArrayList<Topping> ingredients;
     private Crust crust;
 
+    public Pizza() {}
+
     public enum Crust {
         Original("Original"),
         Thin("Thin"),
@@ -38,6 +40,21 @@ public class Pizza {
 
     public ArrayList<Topping> getIngredients() {
         return ingredients;
+    }
+
+    public String getIngredientsAsString(){
+        StringBuilder sb = new StringBuilder();
+
+        if(this.ingredients.size() > 0){
+            for (Topping t : this.ingredients) {
+                sb.append(t.getVal()).append(" ,");
+            }
+
+            //delete the last 2 elements
+            sb.delete(sb.length()-2, sb.length());
+        }
+
+        return sb.toString();
     }
 
     public Crust getCrust() {

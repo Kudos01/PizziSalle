@@ -13,7 +13,7 @@ public class DBConnection {
 
     public Connection conn;
 
-    private DBConnection() throws SQLException {
+    private DBConnection() {
         MysqlDataSource dataSource = new MysqlDataSource();
         dataSource.setUser("java");
         dataSource.setPassword("password");
@@ -22,10 +22,15 @@ public class DBConnection {
 
         dataSource.setServerName("PizziSalle");
 
-        conn = dataSource.getConnection();
+        try {
+            conn = dataSource.getConnection();
+            conn.setAutoCommit(true);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
-    public static DBConnection getInstance() throws SQLException {
+    public static DBConnection getInstance() {
         if (dbConnection == null)
             dbConnection = new DBConnection();
         return dbConnection;

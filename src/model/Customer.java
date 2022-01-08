@@ -7,7 +7,7 @@ import java.util.Date;
 public class Customer {
     private String name;
     private String phone;
-    private Date dob;
+    private String dob;
     private String address;
     private boolean first_order;
     private Delegations delegation;
@@ -20,7 +20,7 @@ public class Customer {
         this.phone = phone;
     }
 
-    public void setAge(Date dob) {
+    public void setDoB(String dob) {
         this.dob = dob;
     }
 
@@ -36,10 +36,6 @@ public class Customer {
         this.delegation = Delegations.valueOf(delegation);
     }
 
-    public void setDob(Date dob) {
-        this.dob = dob;
-    }
-
     public String getName() {
         return name;
     }
@@ -48,7 +44,7 @@ public class Customer {
         return phone;
     }
 
-    public Date getDob() {
+    public String getDoB() {
         return dob;
     }
 

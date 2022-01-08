@@ -4,7 +4,6 @@ import model.constants.NamedPizza;
 import model.constants.Topping;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 import static model.constants.Topping.*;
 
